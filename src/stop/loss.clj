@@ -9,12 +9,6 @@
   {:pre [((complement neg?) time-ms)]}
   {:time-ms time-ms})
 
-(defn is-price-changed? [message]
-  (contains? message :price))
-
-(defn is-time-ms-message? [message]
-  (contains? message :time-ms))
-
 (def ^:dynamic max-time-in-loss-zone-ms 30000)
 
 (def ^:dynamic max-time-in-trailing-zone-ms 15000)
